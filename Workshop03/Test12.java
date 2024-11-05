@@ -26,6 +26,7 @@ public class Test12 {
 			a /= 10;
 			n++;
 		}
+		
 		System.out.println("그 수는 " + n + "자리입니다.");
 		
 		sc.close();

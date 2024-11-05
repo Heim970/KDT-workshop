@@ -8,6 +8,7 @@ public class Test14 {
 			for (int j = 1; j < 10; j++) {
 				System.out.printf(" %2d", i * j);
 			}
+			
 			System.out.println();
 		}
 	}

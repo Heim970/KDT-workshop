@@ -12,15 +12,19 @@ public class Test07 {
 		 */
 		
 		Scanner sc = new Scanner(System.in);
+		
 		System.out.println("한 자리 정수값을 입력하시오");
 		int n = sc.nextInt();
 		int sum = 0;
+		
 		for (int i = 1; i <= 100; i++) {
 			if (i % n == 0) {
 				if (sum == 0) {
 					System.out.printf("%d", i);
-				} else
-					System.out.printf("+%d", i);
+				} else {
+					System.out.printf("+%d", i);					
+				}
+				
 				sum += i;
 			}
 		}

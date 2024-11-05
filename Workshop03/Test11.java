@@ -23,9 +23,7 @@ public class Test11 {
 			b = sc.nextInt();
 			if (a > b) {
 				System.out.println("a보다 큰 값을 입력하세요!");
-			} else {
-				break;
-			}
+			} else break;
 		}
 		
 		System.out.println("b - a는 " + (b-a) + "입니다.");

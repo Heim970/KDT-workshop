@@ -19,13 +19,19 @@ public class Test09 {
 		
 		System.out.printf("b 값: ");
 		int b = sc.nextInt();
-		if (b > max) max = b;
+		if (b > max) {
+			max = b;
+		}
 		
 		System.out.printf("c 값: ");
 		int c = sc.nextInt();
-		if (c > max) max = c;
+		if (c > max) {
+			max = c;
+		}
 		
-		System.out.println("최대값: "+max);
+		System.out.println("최대값: " + max);
+		
+		
 		sc.close();
 	}
 

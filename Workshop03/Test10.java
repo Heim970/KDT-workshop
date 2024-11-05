@@ -25,7 +25,10 @@ public class Test10 {
 		for (int i = 1; i <= n; i++) {
 			sum += i;
 		}
+		
 		System.out.printf("1부터 %d까지의 총합: %d", n, sum);
+		
+		
 		sc.close();
 	}
 
