@@ -1,6 +1,6 @@
 package Workshop.Workshop04;
 
-import java.util.Scanner;
+import java.util.Random;
 
 public class ArrayTest10 {
 
@@ -21,18 +21,21 @@ public class ArrayTest10 {
 		 * avg=3.5
 		 */
 
-		Scanner sc = new Scanner(System.in);
-		// Scanner로 정수 데이터 입력
+		Random random = new Random();
 		
-		int n;
-		int m;
+		// argumets로 입력받음
 		
-		while (true) {
-			n = sc.nextInt();
-			m = sc.nextInt();
-			if ((n < 1 || n > 5) || (m < 1 || m > 5)) {
-				System.out.println("숫자를 확인하세요");
-			} else break; // 정상입려
+		if (args.length != 2) {
+			System.out.println("다시 입력하세요");
+			return;
+		}
+		
+		int n = Integer.parseInt(args[0]);
+		int m = Integer.parseInt(args[1]);
+
+		if ((n < 1 || n > 5) || (m < 1 || m > 5)) {
+			System.out.println("숫자를 확인하세요");
+			return;
 		}
 		
 		// 배열 생성
@@ -42,20 +45,19 @@ public class ArrayTest10 {
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
 				// 랜덤한 숫자 r를 생성해서 배열에 삽입(1 ~ 5 정수)
-				// arr4[i][j] = r;
-				
+				arr4[i][j] = random.nextInt(5) + 1;
 				// 숫자 출력, 합계에 누적
 				System.out.printf("%d ", arr4[i][j]);
-				sum = arr4[i][j];
+				sum += arr4[i][j];
 			}
 			System.out.println();
 		}
+		System.out.println();
 		
 		// 평균값 구하고 출력
-		double avg = sum * 1.0 / (n-1) / (m-1);
+		double avg = sum * 1.0 / (n - 1) / (m - 1);
 		System.out.printf("sum=%d\navg=%.1f", sum, avg);
 		
-		sc.close();
 	}
 
 }

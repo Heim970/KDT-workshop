@@ -1,5 +1,6 @@
 package Workshop.Workshop04;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class ArrayTest07 {
@@ -28,10 +29,13 @@ public class ArrayTest07 {
 		int[] height = new int[num];
 		int max = 0;
 		
-		for (int i = 0; i < num; i++) {
-			System.out.printf("사람 %d: ", i + 1);
-			
+		Random random = new Random();
+		
+		for (int i = 0; i < num; i++) {			
 			// 랜덤 키 값을 생성하고 배열에 저장, 출력하는 코드
+			height[i] = random.nextInt(120) + 100;
+			
+			System.out.printf("사람 %d: %d\n", i + 1, height[i]);
 			
 			if (height[i] > max) {
 				max = height[i];
