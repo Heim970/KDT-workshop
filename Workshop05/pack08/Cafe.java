@@ -10,6 +10,7 @@ public class Cafe {
 	// 생성자
 	public Cafe() {}
 
+	// 메서드
 	public void setCoffee(Coffee coffee) {
 		// Coffee 객체를 배열에 저장한다.
 		// 배열 저장 위치는 index 값을 이용한다.
