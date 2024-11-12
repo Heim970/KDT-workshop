@@ -21,14 +21,13 @@ public class CafeTest {
 		
 		
 		// Coffee 배열에 있는 객체 정보를 모두 출력한다.
-		int sum = 0;
 		for (Coffee c : cafe.getCoffeeList()) {
 			System.out.println(c.toString());
-			sum += c.getPrice();
 		}
 		
 		// Coffee 가격의 합을 출력한다.
 		System.out.println();
+		int sum = cafe.totalPrice();
 		System.out.printf("Coffee 가격의 합 : %d원\n", sum);
 	}
 
