@@ -8,17 +8,16 @@ public class Cafe {
 	
 	
 	// 생성자
-	public Cafe() {}
-
+	public Cafe() {
+		coffeeList = new Coffee[3];
+	}
+	
+	
 	// 메서드
 	public void setCoffee(Coffee coffee) {
 		// Coffee 객체를 배열에 저장한다.
 		// 배열 저장 위치는 index 값을 이용한다.
 		// 배열에 모두 저장되면 "더 이상 값을 저장할 수 없습니다"를 출력한다.
-		if (coffeeList == null) {
-			coffeeList = new Coffee[3];
-		}
-		
 		if (index <= coffeeList.length - 1) {
 			coffeeList[index] = coffee;
 			index++;

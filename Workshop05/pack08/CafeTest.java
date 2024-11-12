@@ -11,14 +11,9 @@ public class CafeTest {
 		
 		// Coffee 객체를 3개 생성하고, setCoffee()를 이용하여 Coffee 배열에 넣는다.
 		
-		Coffee c1 = new Coffee("Americano", 4000);
-		Coffee c2 = new Coffee("Caffelatte", 5000);
-		Coffee c3 = new Coffee("Macchiato", 6000);
-		
-		cafe.setCoffee(c1);
-		cafe.setCoffee(c2);
-		cafe.setCoffee(c3);
-		
+		cafe.setCoffee(new Coffee("Americano",  4000));
+		cafe.setCoffee(new Coffee("Caffelatte", 5000));
+		cafe.setCoffee(new Coffee("Macchiato",  6000));
 		
 		// Coffee 배열에 있는 객체 정보를 모두 출력한다.
 		for (Coffee c : cafe.getCoffeeList()) {
@@ -26,9 +21,8 @@ public class CafeTest {
 		}
 		
 		// Coffee 가격의 합을 출력한다.
-		int sum = cafe.totalPrice();
 		System.out.println();
-		System.out.printf("Coffee 가격의 합 : %d원\n", sum);
+		System.out.printf("Coffee 가격의 합 : %d원\n", cafe.totalPrice());
 	}
 
 }
