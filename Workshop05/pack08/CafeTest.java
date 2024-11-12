@@ -26,8 +26,8 @@ public class CafeTest {
 		}
 		
 		// Coffee 가격의 합을 출력한다.
-		System.out.println();
 		int sum = cafe.totalPrice();
+		System.out.println();
 		System.out.printf("Coffee 가격의 합 : %d원\n", sum);
 	}
 
