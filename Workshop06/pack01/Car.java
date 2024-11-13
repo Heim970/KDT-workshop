@@ -13,27 +13,29 @@ public class Car extends Vehicle {
 		super(maxWeight, oilTankSize, efficiency);
 	}
 	
-	
 	// 메서드
 	public void addOil(int oil) {
 		// 현재 오일량에 추가한다. 단, 오일 탱크 크기를 넘어서면 안 된다.
-		if (getRestOil() + oil <= getOilTankSize()) {
-			this.setRestOil(getRestOil() + oil);
+		if (restOil + oil <= getOilTankSize()) {
+			restOil += oil;
 		} else {
-			this.setRestOil(getOilTankSize());
+			restOil = getOilTankSize();
+			System.out.println("가득이요!");
 		}
 	}
 	
 	public void moving(int distance) {
 		// 연비와 주행거리에 따라 오일량을 감소시킨다.
-		this.setRestOil(getRestOil() - getEfficiency() * distance);
+		restOil -= getEfficiency() * distance;
 	}
 	
 	public void addWeight(int weight) {
 		// 현재 적재량에 물건을 추가한다.
 		// 단, 최대적재중량을 넘어서면 안 된다.
-		if (getCurWeight() + weight <= getMaxWeight()) {
-			this.setCurWeight(weight + getCurWeight());
+		if (curWeight + weight <= getMaxWeight()) {
+			curWeight += weight;
+		} else {
+			System.out.println("중량 초과");
 		}
 	}
 

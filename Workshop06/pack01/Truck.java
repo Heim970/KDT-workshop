@@ -11,11 +11,13 @@ public class Truck extends Car {
 
 	
 	// 메서드
+	@Override
 	public double getEfficiency() {
 		// 현재 적재 중량 5 Kg 당 연비 0.2 km씩 감소시킨 값을 리턴한다.
 		return super.getEfficiency() - (getCurWeight() / 5 * 0.2);
 	}
 	
+	@Override
 	public void moving(int distance) {
 		// calcOil()을 호출하여 오일 감소량을 획득하고,
 		// 잔여오일량에서 감소량을 뺀 새로운 잔여오일량으로 재설정한다.
@@ -26,7 +28,7 @@ public class Truck extends Car {
 		// 거리를 연비로 나누어 오일 소모량을 추출하고 리턴한다.
 		return distance / getEfficiency();
 	}
-	
+
 	public int getCost(int distance) {
 		// calcOil()을 호출하여 오일 감소량을 획득하고,
 		// 1 L당 3000원의 요금을 산정하여 리턴한다.
