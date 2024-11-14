@@ -14,18 +14,18 @@ public class Ltab extends Mobile {
 	// 메서드
 	@Override
 	public int operate(int time) {
-		int amount = time * -10;
-		int batteryNow = super.getBatterySize() + amount;
+		// 분당 10만큼 배터리 감소
+		int batteryNow = super.getBatterySize() - time * 10;
 		super.setBatterySize(batteryNow);
-		return batteryNow;
+		return getBatterySize();
 	}
 
 	@Override
 	public int charge(int time) {
-		int amount = time * 10;
-		int batteryNow = super.getBatterySize() + amount;
+		// 분당 10만큼 배터리 증가
+		int batteryNow = super.getBatterySize() + time * 10;
 		super.setBatterySize(batteryNow);
-		return batteryNow;
+		return getBatterySize();
 	}
 
 }

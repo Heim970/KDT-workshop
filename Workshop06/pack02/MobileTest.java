@@ -7,12 +7,12 @@ public class MobileTest {
 		// 각각의 Mobile 객체를 생성한다.
 		Mobile m1 = new Ltab("Ltab", 500, "AP-01");
 		Mobile m2 = new Otab("Otab", 1000, "AND-20");
-		
+
 		// 생성된 객체의 정보를 출력한다.
 		System.out.printf("%s\t\t%s\t\t%s\n", "Mobile", "Battery", "OS");
 		System.out.println("------------------------------------------");
-		System.out.println(m1);
-		System.out.println(m2);
+		System.out.println(m1.getMobileName() + "\t\t" + m1.getBatterySize() + "\t\t" + m1.getOsType());
+		System.out.println(m2.getMobileName() + "\t\t" + m2.getBatterySize() + "\t\t" + m2.getOsType());
 		System.out.println();
 		
 		// 각각의 Mobile 객체에 10분씩 충전을 한다.
@@ -23,8 +23,8 @@ public class MobileTest {
 		System.out.println("10분 충전");
 		System.out.printf("%s\t\t%s\t\t%s\n", "Mobile", "Battery", "OS");
 		System.out.println("------------------------------------------");
-		System.out.println(m1);
-		System.out.println(m2);
+		System.out.println(m1.getMobileName() + "\t\t" + m1.getBatterySize() + "\t\t" + m1.getOsType());
+		System.out.println(m2.getMobileName() + "\t\t" + m2.getBatterySize() + "\t\t" + m2.getOsType());
 		System.out.println();
 		
 		// 각각의 Mobile 객체에 5분씩 통화를 한다.
@@ -35,8 +35,8 @@ public class MobileTest {
 		System.out.println("5분 통화");
 		System.out.printf("%s\t\t%s\t\t%s\n", "Mobile", "Battery", "OS");
 		System.out.println("------------------------------------------");
-		System.out.println(m1);
-		System.out.println(m2);
+		System.out.println(m1.getMobileName() + "\t\t" + m1.getBatterySize() + "\t\t" + m1.getOsType());
+		System.out.println(m2.getMobileName() + "\t\t" + m2.getBatterySize() + "\t\t" + m2.getOsType());
 		System.out.println();
 	}
 }

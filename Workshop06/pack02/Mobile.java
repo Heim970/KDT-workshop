@@ -45,13 +45,5 @@ public abstract class Mobile {
 	public void setOsType(String osType) {
 		this.osType = osType;
 	}
-
-	@Override
-	public String toString() {
-		return mobileName + "\t\t" + batterySize + "\t\t" + osType;
-	}
-	
-	
-	
 	
 }
