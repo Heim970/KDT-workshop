@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="">
+            <h1>Payment Form</h1>
+            <hr>
+            <p>Required fields are followed by *</p>
+            <h2>Contact Information</h2>
+            <p>
+                Name: * <input type="text" name="username" placeholder="smith">
+            </p>
+            <fieldset>
+                <legend>Gender *</legend>
+                <p>
+                    Male <input type="radio" id="Male" name="gender" value="m" />
+                    Female <input type="radio" id="Female" name="gender" value="f" />
+                    Other <input type="radio" id="Other" name="gender" value="o" />
+                </p>
+            </fieldset>
+            <p>
+                Address:
+                <textarea name="address" id="address" placeholder="Enter the addres" rows="5" cols="100"></textarea>
+            </p>
+            <p>
+                Email: * <input type="email" name="userEmail" placeholder="smith@gmail.com">
+            </p>
+            <p>
+                Pincode: * <input type="number" name="userPincode" placeholder="123456">
+            </p>
+            <hr>
+            <h2>Payment Information</h2>
+            <p>
+                Card Type: *
+                <select name="cardType">
+                    <option value="">--Select a Card Type--</option>
+                    <option value="Rupay">Rupay</option>
+                    <option value="Mastercard">Mastercard</option>
+                    <option value="Visa">Visa</option>
+                </select>
+            </p>
+            <p>
+                Card number: *
+                <input type="text" name="cardNum" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}"
+                    placeholder="1111-2222-3333-4444">
+            </p>
+            <p>
+                Expiration Date: *
+                <input type="date" name="exp_date">
+            </p>
+            <p>
+                CVV: * <input type="text" name="cvvNum">
+            </p>
+            <input type="submit" value="Pay Now">
+        </form>
+    </div>
+</body>
+
+</html>
