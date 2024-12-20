@@ -10,6 +10,7 @@
 - JDBC/workshop01
 
 ---
-## 2024- 교재: 자바 완전 정복
-
+## 2024-12-18 ~ MDN HTML 튜토리얼(HTML, CSS, JavaScript)
+- project1
+- test.html
 ---
