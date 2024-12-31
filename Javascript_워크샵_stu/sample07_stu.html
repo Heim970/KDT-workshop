@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta charset="UTF-8">
+     <title>Insert title here</title>
+     <script type="text/javascript">
+
+          function sum(n) {
+               var sum = 0;
+               for (var i = 1; i <= n; i++) {
+                    sum += i;
+               }
+               console.log(sum);
+               document.querySelector("#result").innerHTML = sum;
+          }
+
+     </script>
+</head>
+
+<body>
+     <button onclick="sum(5)">5</button>
+     <button onclick="sum(10)">10</button>
+     <button onclick="sum(15)">15</button><br>
+     총합:<span id="result"></span>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function () {
+
+			$(".calc").on("click", () => {
+				var num = Number.parseInt($(event.target).text());
+				var sum = 0;
+				for (var i = 1; i <= num; i++) {
+					sum += i;
+				}
+				$("#result").text(sum);
+			});
+
+		});
+	</script>
+</head>
+
+<body>
+	<button class="calc">5</button>
+	<button class="calc">10</button>
+	<button class="calc">15</button><br>
+	총합:<span id="result"></span>
+</body>
+
+</html>

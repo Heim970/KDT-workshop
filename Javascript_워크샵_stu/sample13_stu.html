@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <title>Insert title here</title>
+   <script type="text/javascript">
+
+      function chk() {
+         var id = document.querySelector("#userid").value;
+         var pw = document.querySelector("#passwd").value;
+
+         if (id === "") {
+            alert("아이디를 입력하세요.");
+
+         } else if (pw === "") {
+            alert("비밀번호를 입력하세요.");
+
+         } else {
+            document.querySelector("form").submit();
+         }
+      }
+
+   </script>
+</head>
+
+<body>
+   <form action="success.html">
+      아이디<input type="text" name="userid" id="userid"><br>
+      비밀번호<input type="text" name="passwd" id="passwd"><br>
+      <input type="button" value="로그인" onclick="chk()">
+   </form>
+</body>
+
+</html>

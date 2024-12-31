@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script type="text/javascript">
+
+        function chk() {
+            var id = document.querySelector("#userid");
+            var pw = document.querySelector("#passwd");
+            document.querySelector("#idSpan").innerHTML = "";
+            document.querySelector("#pwSpan").innerHTML = "";
+            if (id.value.length === 0) {
+                document.querySelector("#idSpan").innerHTML = "아이디값을 입력하세요."
+                id.focus();
+                event.preventDefault();
+            } else if (pw.value.length === 0) {
+                document.querySelector("#pwSpan").innerHTML = "비밀번호값을 입력하세요."
+                pw.focus();
+                event.preventDefault();
+            } 
+        }
+
+    </script>
+</head>
+
+<body>
+    <form action="success.html" onsubmit="chk()">
+        아이디<input type="text" name="userid" id="userid">
+        <span id="idSpan"></span><br>
+        비밀번호<input type="text" name="passwd" id="passwd">
+        <span id="pwSpan"></span><br>
+        <input type="submit" value="로그인">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+  <script type="text/javascript">
+
+    let children;
+    function childOpen() {
+      children = window.open("./childWin_stu.html", "", "left=100,top=500,width=320,height=320");
+    }
+    function childClose() {
+      children.close();
+    }
+    function parentClose() {
+      window.close();
+    }
+  </script>
+</head>
+
+<body>
+  <button onClick="childOpen()">새창 열기</button>
+  <button onClick="childClose()">새창 닫기</button>
+  <button onClick="parentClose()">현재창(부모장) 닫기</button>
+</body>
+
+</html>

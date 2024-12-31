@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script type="text/javascript">
+
+        let arr=[];
+
+        function save() {
+            var v1 = document.querySelector("#v1").value;
+            arr.push(v1);
+            document.querySelector("#v1").value = "";
+            list();
+        }
+
+        function list() {
+            var result = document.querySelector("#result");
+            var mesg = '';
+            arr.forEach((ele, idx, arr) => {
+                mesg += ele + '<br>';
+            });
+            result.innerHTML = mesg;
+        }
+
+    </script>
+</head>
+
+<body>
+    값:<input type="search" name="v1" id="v1">
+    <button onClick="save()">저장</button><br>
+
+    <div id="result">
+
+    </div>
+
+</body>
+
+</html>

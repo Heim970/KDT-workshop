@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script type="text/javascript">
+        function checkAll() {
+            var chk = document.querySelector("#chkall").checked;
+            
+            var chk_list = document.querySelectorAll(".lang");
+
+            chk_list.forEach((ele, idx, arr) => {
+                ele.checked = chk;
+            });
+        }
+
+
+    </script>
+</head>
+
+<body>
+    전체선택
+    <input type="checkbox" name="all" onclick="checkAll()" id="chkall"><br>
+    <input type="checkbox" name="java" class="lang">java<br>
+    <input type="checkbox" name="sql" class="lang">sql<br>
+    <input type="checkbox" name="angular" class="lang">angular<br>
+</body>
+
+</html>
