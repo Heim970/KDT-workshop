@@ -8,8 +8,11 @@
 <script>
 
  $(document).ready(function() {
-
-	   //구현
+	$("#a").on("click", function(){
+		var id = $("#userid").val();
+		opener.$("#userid").val(id);
+		window.close();
+	})
 });
 </script>
 </head>

@@ -10,6 +10,9 @@
     $(document).ready(function() {
 		 var childWin;
 			//구현
+		$("button").on("click", function(){
+			childWin = window.open("childWin2.html", "중복검사", "left=100 top=200 width=500 height=300");
+		});
 	});
 </script>
 </head>

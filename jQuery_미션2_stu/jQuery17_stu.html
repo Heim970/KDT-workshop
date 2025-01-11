@@ -9,9 +9,18 @@
 
   
    $(document).ready(function() {
-	   
-	   var childWin;
-		//구현
+		var childWin;
+		$("#one").on("click", function(){
+			childWin = window.open("childWin.html", "child", "left=100 top=200 width=500 height=300");
+		});
+
+		$("#two").on("click", function(){
+			childWin.close();
+		});
+
+		$("#three").on("click", function(){
+			window.close();
+		});
 	});
 </script>
 </head>

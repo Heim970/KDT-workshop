@@ -8,8 +8,11 @@
 <script type="text/javascript">
 
    $(document).ready(function() {
-		 var childWin;
-			//구현
+		var childWin;
+		$("button").on("click", function(){
+			childWin = window.open("childWin3.html", "주소", "left=100 top=100 width=300 height=200")
+			
+		});
    });
 
 </script>

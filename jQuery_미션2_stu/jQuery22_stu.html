@@ -8,8 +8,28 @@
 <script type="text/javascript">
 
    $(document).ready(function() {
-		//구현
+		// 1. [연산]
+      $("#one").on("click", function(){
+         var v1 = Number.parseInt($("#v1").val());
+         var v2 = Number.parseInt($("#v2").val());
+         $("#result").val(v1 + v2);
+      });
+
+      // 2. 가격 x 수량 = 총합
+      $("#quantity").on("change", function(){
+         var price = Number.parseInt($("#price").val());
+         var total = price * $("#quantity").val();
+         $("#total").text(total);
+      });
 		
+      // 3. 선택된 값만 총합 구하기
+      $("#two").on("click", function(){
+         var sum = 0;
+         $("input:checked").each((idx, ele) => {
+            sum += Number.parseInt($(ele).val());
+         })
+         $("#totalPrice").text(sum);
+      });
  });
 </script>
 </head>

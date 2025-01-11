@@ -9,7 +9,12 @@
 
 $(document).ready(function() {
 	var sum = 0;
-	//구현
+	$("#sum").on("click", function(){
+		$("li").each((idx, ele) => {
+			sum += Number.parseInt($(ele).text());
+		});
+		$("#result").text(sum);
+	});
 });
 </script>
 </head>

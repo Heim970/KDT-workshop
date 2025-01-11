@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
 
- function post(postNum,addr){
-	   //구현
- }
+    function post(postNum, addr) {
+      opener.$("#post").val(postNum);
+      opener.$("#address").val(addr);
+    }
 
-</script>
+  </script>
 </head>
+
 <body>
   <table border="1">
-     <tr>
+    <tr>
       <th>우편번호</th>
       <th>주소</th>
     </tr>
@@ -28,5 +30,6 @@
       <td>경기도 고양시 ZZZ 아파트</td>
     </tr>
   </table>
- </body>
+</body>
+
 </html>
